@@ -8,15 +8,15 @@ services:
     ports:
      - "8080:8080"
     volumes:
-      - ./overrides:/overrides
+      - /home/jesper/cards:/overrides
     networks:
       - pyx-net
     environment:
-      - TOMCAT_USER=tomcat_user
-      - TOMCAT_PASSWORD=tomcat_password
+      - TOMCAT_USER=Villhahallon
+      - TOMCAT_PASSWORD=9439
       - DB_NAME=pyx
       - DB_USER=pyx
-      - DB_PASSWORD=CorrectHorseBatteryStaple
+      - DB_PASSWORD=9439
 
   postgres:
     image: "postgres:alpine"
@@ -28,7 +28,7 @@ services:
     environment:
       - POSTGRES_DB=pyx
       - POSTGRES_USER=pyx
-      - POSTGRES_PASSWORD=CorrectHorseBatteryStaple
+      - POSTGRES_PASSWORD=9439
 
   ngrok:
     image: wernight/ngrok:latest
